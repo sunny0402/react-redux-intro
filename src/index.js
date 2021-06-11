@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
+// 1) need react-redux. Provider Component about everything.
+import { Provider } from "react-redux";
+// 2) Create a store for the provider.
+import { createStore } from "redux";
+// 3) Reducers to populate the store. Start with rootReducer.
+import rootReducer from "./reducers/rootReducer";
+// 4) Create the store
+const theStore = createStore(rootReducer);
+
+// Provider connects redux and react
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={theStore}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  </Provider>,
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  document.getElementById("root")
+);
