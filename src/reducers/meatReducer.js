@@ -7,12 +7,12 @@
 // };
 
 const seedData = [
-  { food: "TV Dinners", quantity: 100 },
-  { food: "Veggies", quantity: 200 },
-  { food: "Frozen pizzas", quantity: 300 },
+  { food: "burger", quantity: 1000 },
+  { food: "steak", quantity: 2000 },
+  { food: "chicke", quantity: 3000 },
 ];
 
-function frozenReducer(state = seedData, action) {
+function meatReducer(state = seedData, action) {
   return state;
 }
-export default frozenReducer;
+export default meatReducer;

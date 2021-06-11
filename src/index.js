@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 
 // 1) need react-redux. Provider Component about everything.
 import { Provider } from "react-redux";
